@@ -6,51 +6,63 @@
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background: linear-gradient(to right, #1e3c72, #2a5298);
+  background: linear-gradient(to right, #d14913 1%, #fe9900 20%, #00f2fe, #135fd1 50%,  #00f2fe, #fe9900 80%, #d14913 99%);
+  background-size: 100% 100%;
   color: white;
   font-family: Arial, sans-serif;
   text-align: center;
   padding: 20px;
 }
 
-/* Header styling */
 .app-title {
   font-size: 2.5rem;
   font-weight: bold;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   text-align: center;
   color: white;
-  background: linear-gradient(to right, #4facfe, #00f2fe);
+  background: linear-gradient(to right, #3a8ccf, #207bcb);
   padding: 10px 20px;
-  border-radius: 20px; /* Rounded border */
+  border-radius: 20px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-/* Search bar container styling */
+.app-title:hover {
+  background: linear-gradient(to right, #207bcb, #3a8ccf);
+}
+
+/* Search bar container */
 .search-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 10px;
-  margin-top: 20px;
+  margin-top: 10px;
   padding: 20px;
-  background: linear-gradient(to right, #4facfe, #00f2fe);
-  border-radius: 20px; /* Rounded border */
+  background: linear-gradient(to right, #e0eafc, #cfdef3);
+  border-radius: 20px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  max-width: 400px;
+  max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* Input field styling */
 .search-input {
   padding: 10px;
-  width: 250px;
+  width: 400px;
   border-radius: 5px;
   border: 2px solid #4facfe;
   outline: none;
   font-size: 1rem;
+  color: #333; 
+  background-color: #ffffff; 
+}
+
+.search-input::placeholder {
+  color: #888;
 }
 
 .search-input:focus {
@@ -58,9 +70,8 @@
   box-shadow: 0 0 5px #00f2fe;
 }
 
-/* Button styling */
 .search-button {
-  padding: 10px 20px;
+  padding: 10px 30px;
   background-color: #4facfe;
   color: white;
   border: none;
@@ -79,15 +90,17 @@
   margin-top: 10px;
 }
 
+/* Weather container */
 .weather-container {
-  background: linear-gradient(to right, #4facfe, #00f2fe);
+  background: linear-gradient(to right, #fbb03b, #4a90e2);
   color: white;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   text-align: center;
   margin-top: 20px;
-  max-width: 400px;
+  width: 100%;
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -114,6 +127,10 @@
   padding: 0;
   margin: 0;
   text-align: left;
+  width: 100%;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .weather-item {
@@ -125,14 +142,15 @@
 }
 
 .weather-card {
-  background: linear-gradient(to right, #4facfe, #00f2fe);
+  background: linear-gradient(to right, #3a8ccf, #207bcb);
   color: white;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   text-align: center;
   margin-top: 20px;
-  max-width: 400px;
+  max-width: 1200px;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -156,4 +174,77 @@
 .weather-wind {
   font-size: 0.9rem;
   margin: 3px 0;
+}
+
+/* Media query for smartphones (max-width: 768px) */
+@media (max-width: 768px) {
+  .app-container {
+    padding: 10px;
+  }
+
+  .app-title {
+    font-size: 2rem;
+    padding: 8px 16px;
+  }
+
+  .search-container {
+    padding: 15px;
+    max-width: 90%;
+  }
+
+  .search-input {
+    width: 100%;
+    font-size: 0.9rem;
+  }
+
+  .search-button {
+    width: 100%;
+    font-size: 0.9rem;
+  }
+
+  .weather-container {
+    padding: 15px;
+    max-width: 90%;
+  }
+
+  .weather-title {
+    font-size: 1.5rem;
+  }
+
+  .weather-details {
+    font-size: 0.9rem;
+  }
+
+  .weather-icon {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+/* Media query for very small devices (max-width: 480px) */
+@media (max-width: 480px) {
+  .app-title {
+    font-size: 1.8rem;
+  }
+
+  .search-input {
+    font-size: 0.8rem;
+  }
+
+  .search-button {
+    font-size: 0.8rem;
+  }
+
+  .weather-title {
+    font-size: 1.3rem;
+  }
+
+  .weather-details {
+    font-size: 0.8rem;
+  }
+
+  .weather-icon {
+    width: 60px;
+    height: 60px;
+  }
 }

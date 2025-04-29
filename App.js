@@ -26,7 +26,9 @@ function App() {
 
   return (
     <div className="app-container">
-      <h1 className="app-title">🌤️ Wetter-App</h1>
+      <a href="/" className="app-title">
+        🌤️ Weather App
+      </a>
       <SearchBar search={search} setSearch={setSearch} fetchWeather={fetchWeather} />
 
       {error && <p className="error-message">{error}</p>}
